@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header, main, footer {
+            padding: 20px;
+            /*background-color: #f4f4f4;  Remove or adjust as needed */
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* --- Header Styles --- */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Changed to flex-start for mobile */
+            justify-content: space-between;
+            /*border-bottom: 1px solid #ccc;  Remove or adjust as needed */
+        }
+
+        header div {
+            display: flex;
+            flex-direction: column; /* Changed to column for mobile */
+            align-items: flex-start;  /* Added for mobile */
+            width: 100%; /* Added for mobile */
+        }
+        
+        header div nav {
+            display: flex;
+            justify-content: flex-end; /* Moved to nav for better structure */
+            width: 100%; /* Added to make nav take full width in mobile */
+        }
+
+        header div nav a {
+            margin-left: 0; /* Reset margin-left for mobile */
+            margin-right: 10px; /* Added margin between links */
+        }
+
+        header h1 {
+            font-size: 24px; /* Adjusted font size for mobile */
+            margin-top: 10px; /* Added margin-top to separate from nav in mobile */
+        }
+
+        /* --- Main Styles --- */
+        main {
+            /*display: flex;  Removed from here for better mobile layout */
+            flex-direction: column; /* Added for mobile */
+            gap: 20px;
+        }
+
+        main section {
+            margin-bottom: 20px;
+        }
+
+        main section:nth-child(1) {
+            display: flex;
+            flex-direction: column; /* Stack columns on mobile */
+            gap: 20px;
+        }
+
+        
+        main section div ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        main section:nth-child(2) {
+            flex-direction: column; /* Stack review sections on mobile */
+        }
+
+        main section:nth-child(2) div{
+            margin-bottom: 20px;
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            /*border-top: 1px solid #ccc; Remove or adjust as needed */
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (min-width: 768px) {
+            /* Tablet Styles and up */
+            header {
+                flex-direction: row; /* Restore row layout for tablet and desktop */
+                align-items: center;
+            }
+
+            header div {
+                flex-direction: row; /* Restore row layout for tablet and desktop */
+                align-items: center;
+                justify-content: space-between; /* Distribute items in the header */
+                width: auto; /* Adjust width for tablet/desktop */
+            }
+
+            header div nav {
+                justify-content: flex-end; /* Ensure nav is on the right on tablet/desktop */
+            }
+
+            main {
+                display: flex; /* Enable flexbox for columns on tablet/desktop */
+                flex-direction: row;
+                justify-content: space-between;
+                flex-wrap: wrap; /* Allow wrapping to handle smaller tablet screens */
+            }
+
+            main section:nth-child(1) {
+                flex-direction: row; /* Restore columns on tablet/desktop */
+                justify-content: space-between;
+            }
+
+            main section div {
+                width: 30%; /* Define 30% width for columns on tablet/desktop */
+            }
+            
+            main section:nth-child(2) {
+                flex-direction: row; /* Make review sections horizontal on tablet/desktop */
+                justify-content: space-around;
+                flex-wrap: nowrap; /* Prevent wrapping on larger screens if needed */
+            }
+             main section:nth-child(2) div{
+                margin-bottom: 0;
+            }
+        }
+
+        /* --- Added Styles (Optional - for visual enhancements) --- */
+        header {
+            background-color: #e0e0e0;
+        }
+        footer{
+            background-color: #e0e0e0;
+        }
+        main section div{
+            padding: 10px;
+        }
+        main section:nth-child(1) div:nth-child(1){
+             background-color: #f0f0f0;
+        }
+        main section:nth-child(1) div:nth-child(2){
+             background-color: #f0f0f0;
+        }
+        main section:nth-child(1) div:nth-child(3){
+             background-color: #f0f0f0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div>Sharon Muriithi</div>
+            <nav>
+                <a href="#">Home</a> /
+                <a href="#">Projects</a> /
+                <a href="#">Articles</a> /
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+        <div>
+            <h1>Frontend Developer</h1>
+            
+        </div>
+    </header>
+
+    <main>
+        <section style="display: flex; justify-content: space-between;">
+            <div style="width: 30%;">
+                <h2>Projects</h2>
+                <ul>
+                    <li>HTML Only Portfolio</li>
+                    <li>Calculator</li>
+                    <li>Quiz App</li>
+                    <li>Countdown Timer</li>
+                    <li>Product Upcoming Page</li>
+                </ul>
+            </div>
+            <div style="width: 30%;">
+                <h2>Work Experience</h2>
+                <p>roadmap.sh</p>
+                <p>Solved all the frontend projects</p>
+                <a href="#">Visit my Profile</a>
+                
+                <h2>OpenSource Work</h2>
+                <p>Contributed to 50 opensource projects . Made my own projects with 200 GitHub Stars .</p>
+                <a href="#">Visit my GitHub Profile</a>
+            </div>
+            <div style="width: 30%;">
+                <h2>Education</h2>
+                <p>Graduated with 3.76 out of 4 CGPA . Won Acme Hackathon . Organized 30 sessions .</p>
+                
+                <h2>Courses I took :</h2>
+                <ul>
+                    <li>Object Oriented Programming</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Web Engineering</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Human Computer Interaction</li>
+                    <li>Computer Graphics</li>
+                    <li>Database Management Systems</li>
+                    <li>Distributed Database Systems</li>
+                    <li>Discreet Mathematics</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Reviews from my Teachers</h2>
+            <div style="display: flex; justify-content: space-around;">
+                <div style="border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+                    <p>John doe was a brilliant student ; always stood out with his assignments .</p>
+                    <p>Jane Doe</p>
+                    <p>Assistant Professor</p>
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+                    <p>John doe was a brilliant student ; always stood out with his assignments .</p>
+                    <p>Jane Doe</p>
+                    <p>Assistant Professor</p>
+                </div>
+                <div style="border: 1px solid #ccc; padding: 10px; border-radius: 10px;">
+                    <p>John doe was a brilliant student ; always stood out with his assignments .</p>
+                    <p>Jane Doe</p>
+                    <p>Assistant Professor</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; all rights reserved 2025</p>
+    </footer>
+</body>
+</html>
